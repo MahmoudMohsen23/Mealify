@@ -1,0 +1,1359 @@
+* {
+    box-sizing: border-box;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+/* NAVBAR */
+
+.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+.nav-container {
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-container ul {
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+}
+.navbar h1 {
+    margin: 0;
+    
+}
+.navbar h1 a {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(33, 37, 41)
+    ;
+}
+
+.nav-container h1 a::after {
+    content: ".";
+    position: absolute;
+    color: #ce1212;
+
+}
+
+
+
+.nav-container .icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    font-weight: 900;
+    color: rgb(50, 41);
+    font-size: 25px;
+    line-height: 25px;
+}
+
+
+.icons i {
+    cursor: pointer;
+}
+
+
+/*END NAVBAR */
+
+/* HEADER */
+
+.header {
+    background-color: #eee;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 40px 15px;
+    margin-top: 95px;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-photo {
+    width: 100%;
+    transition: all .5s;
+}
+.header-photo img:hover {
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+
+.header-text {
+    width: 100%;
+}
+
+.header-photo img {
+    width: 100%;
+    filter: drop-shadow(4px 4px 9px #000a);
+}
+
+
+
+.header-text h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+    color: rgb(55, 55, 63);
+    margin: 0;
+}
+
+.header-text p {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    line-height: 26px;
+    color: rgb(79, 79, 90);
+    margin: 20px 0;
+}
+
+ul li::selection,
+h1 a::selection,
+li a::selection,
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+span::selection,
+button.two a::selection {
+    background-color: #d85454;
+    color: white;
+}
+iframe::selection, 
+img::selection
+{
+    background-color: #d85454;
+}
+
+
+button.one:hover {
+    background-color: red;
+}
+
+button.two a:hover {
+    color: red;
+}
+
+button.one {
+    background-color: #ce1212;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 100vh;
+    margin-right: 10px;
+    transition: all .5s;
+
+}
+
+button.one a {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 15px;
+}
+
+.grp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.two a {
+    color: black;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    transition: all .5s;
+}
+button.two {
+    border: none;
+}
+.vid-btn { 
+    display: flex;
+    align-items: center;
+}
+.vid-btn .icon-two {
+    width: 55px;
+    height: 55px;
+    background-image: linear-gradient(to right, rgb(206, 18, 18) 0% 50% , transparent 50% 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.vid-btn .icon-two::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+}
+.icon-two i { 
+    z-index: 5;
+}
+/* 
+button.two a i {
+    margin-right: 10px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    align-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+button.two a::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: #ce1212;
+    top: -38%;
+    left: -8%;
+    border-radius: 50%;
+}
+
+
+
+/* END HEADER  */
+
+/* SECTION 2  */
+
+.section-two {
+    background-color: white;
+}
+
+.container2 {
+    margin: 50px 0px;
+    padding: 40px 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.title h2 {
+    margin: 0;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.title h2 span {
+    color: rgb(206, 18, 18);
+}
+
+.title h5 {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(127, 127, 144);
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.card h3 {
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    color: rgb(50, 41);
+    margin: 0;
+
+}
+
+.card h4 {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(127, 127, 144);
+    margin: 5px 0px;
+
+}
+
+.card p {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(127, 127, 144);
+    font-weight: 400;
+}
+
+.chef-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    padding: 20px 0;
+}
+
+.card {
+    width: 100%;
+    border: 1px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+}
+
+.cardphoto img {
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+.cardphoto {
+    position: relative;
+    overflow: hidden;
+}
+
+.over-photo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.overlayer {
+    position: absolute;
+    background-color: #ffffff4d;
+    right: 10px;
+    top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all .5s;
+
+}
+
+.card:hover .overlayer {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.overlayer i {
+    font-size: 1.125rem;
+    padding: 10px;
+    color: #37373f66;
+}
+
+/* END SECTION 2 */
+
+/* SECTION 3 */
+
+.section-three {
+    background-color: #eee;
+}
+
+.container3 {
+    text-align: center;
+    margin: 50px 0px;
+    padding: 40px 15px;
+}
+
+.gallery-photos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.gallery {
+    border: 4px solid #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s;
+}
+.gallery:hover {
+    transform: scale(1.05);
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000096;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(101%);
+    transition: all .5s;
+}
+
+.gallery:hover .layer {
+    transform: translateY(0%);
+}
+
+.layer h2 {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.layer p {
+    margin: 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(221, 221, 221);
+}
+
+.layer h2::selection,
+.layer p::selection {
+    background-color: red;
+}
+
+.pizza {
+    order: 1;
+}
+
+.pizza-slices {
+    order: 3;
+}
+
+.steak {
+    order: 5;
+}
+
+.omlette {
+    order: 4;
+}
+
+.burger {
+    order: 2;
+}
+
+.crispy {
+    order: 6;
+}
+
+.kofta {
+    order: 7;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+/*END SECTION 3 */
+
+/* SECTION 4*/
+.section-four {
+    background-color: #f9f9f9;
+}
+
+.container4 {
+    margin: 50px 0;
+    padding: 40px 15px;
+}
+
+iframe {
+    width: 100%;
+}
+
+.details {
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.details h3 {
+    margin: 0 0 5px 0px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(125, 125, 125);
+}
+
+.details p {
+    margin: 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    color: rgb(50, 41);
+}
+
+.address,
+.email,
+.call,
+.opening {
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    gap: 10px;
+}
+
+.container4 span {
+    font-weight: 700;
+}
+
+.container4 .icon {
+    background-color: hsl(0, 84%, 44%);
+    margin-right: 2px;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1.875rem #00000014;
+    gap: 10px;
+    padding: 20px;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    line-height: 1.5;
+    border: 2px solid rgba(0, 0, 0, .1);
+
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 13px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    line-height: 1.5;
+    min-height: 9.375rem;
+    max-height: 18.75rem;
+    resize: vertical;
+    border: 2px solid rgba(0, 0, 0, .1);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 13px;
+}
+
+form button {
+    margin-top: 25px;
+    padding: 12px 40px;
+    border: 1px;
+    border-radius: 100vh;
+    background-color: hsl(0, 84%, 44%);
+    font-size: 0.9375rem;
+    color: white;
+}
+
+/* END SECTION 4 */
+
+/* FOOTER */
+
+.footer {
+    background-image: linear-gradient(#0009, #0009), url(../images/textured-metal-background.jpg);
+    background-size: contain;
+    box-shadow: 0px -1px 5px #0007;
+}
+
+.container5 {
+    padding: 40px 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about h2 {
+    margin: 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.about h2::after {
+    content: ".";
+    position: absolute;
+    color: #ce1212;
+
+}
+
+.about h3 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ddd6;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 19;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+    color: white;
+}
+
+.social-links i {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+.about p {
+    margin: 10px 0;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.about .img {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.footer .about img {
+    width: 40px;
+    height: 40px;
+}
+
+.subscription-box h3 {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+}
+
+.subscription-box p {
+    margin: 10px 0;
+    font-weight: 400;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white;
+}
+
+.subscription-grp {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+
+}
+
+.subscription-grp input {
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.subscription-grp button {
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, .2);
+    width: 100%;
+    background-color: hsl(0, 84%, 44%);
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: Arial;
+    transition: all .2s;
+}
+
+.quick-links {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+}
+
+.left-links,
+.right-links {
+    width: 100%;
+}
+
+li i {
+    margin-right: 5px;
+}
+
+.quick-links ul li {
+    padding: 5px;
+    font-size: 16px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    color: white;
+    transition: all .5s;
+}
+
+.quick-links ul li a {
+    font-size: 16px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    color: white;
+}
+
+.quick-links ul {
+    margin-top: 10px;
+}
+
+.contact-details {
+    width: 100%;
+}
+
+.contact-details h3 {
+    margin: 0px 0px 10px 0px;
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+}
+
+.contact-details span {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: white;
+}
+
+.contact-details i {
+    font-weight: 900;
+    color: rgb(206, 18, 18);
+    font-size: 22px;
+    line-height: 22px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-details ul {
+    margin: 0;
+}
+
+.contact-details ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quick-links ul li:hover {
+    background-color: rgba(89, 88, 88, 0.5);
+    transform: translateX(10px);
+}
+
+.subscription-grp button:hover {
+    background-color: red;
+}
+
+/* END FOOTER */
+
+/* Small*/
+@media screen and (min-width : 640px) {
+   
+    .sm-100{
+        width: 100%;
+    }
+    .sm-50{
+        width: 50%;
+    }
+    .sm-33{
+        width: 33.333%;
+    }
+
+    .sm-25{
+        width:25%;
+    }
+    .sm-20{
+        width: 20%;
+    }
+    .sm-16{
+        width: 16.666666%;
+    }
+    .pizza {
+        width: 50%;
+        order: 1;
+    }
+    .burger {
+        width: 50%;
+        order: 2;
+    }
+    .pizza-slices {
+        width: 50%;
+        order: 3;
+    }
+    
+    .steak {
+        order: 5;
+        width: 50%;
+    }
+    
+    .omlette {
+        order: 4;
+        width: 50%;
+    }
+    
+    
+    .crispy {
+        order: 6;
+        width: 50%;
+    }
+    
+    .kofta {
+        order: 7;
+        width: 50%;
+    }
+    .gallery-photos {
+        height: 1500px;
+    }
+
+    .container5 {
+       
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        
+    }
+    .container5 .about { 
+        flex: 1 0 48%;
+    }
+    
+    .container5 .contact-details { 
+        flex: 1 0 48%;
+    }
+
+    .subscription { 
+        order: 3;
+    }
+    .subscription-grp {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        
+    }
+    .subscription-grp button {
+        width: 20%;
+    }
+    .subscription-grp input {
+        width: 80%;
+    }
+
+}
+
+/* medium*/
+@media screen and (min-width : 768px) {
+   
+    .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+    .address  {
+        width: 48%;
+    }
+    .email{
+        width: 48%;
+
+    }
+    .call{
+        width: 48%;
+
+    }
+    .opening{
+        width: 48%;
+
+    }    
+    .md-100{
+        width: 100%;
+
+    }
+    .container2 {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .chef-cards .card{
+     width: 48%;
+    }
+    .chef-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .md-50{
+        width: 50%;
+
+    }
+    .md-31{
+        width: 31%;
+
+    }
+    .md-25{
+        width: 25%;
+
+    }
+    .md-20{
+        width: 20%;
+
+    }
+    .md-16{
+        width: 16.666666%;
+
+    }  
+    .container5 {
+       
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+    }
+    .container5 .about { 
+        flex: 0 1 33%;
+    }
+    
+    .container5 .contact-details { 
+        flex: 0 1 33%;
+    }
+    .subscription { 
+        order:0;
+    }
+    .subscription-grp {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        
+    }
+    .subscription-grp button {
+        width: 20%;
+    }
+    .subscription-grp input {
+        width: 80%;
+    }  
+
+    .pizza {
+        width: 50%;
+        order: 1;
+    }
+    .burger {
+        width: 50%;
+        order: 2;
+    }
+    .pizza-slices {
+        width: 50%;
+        order: 3;
+    }
+    
+    .steak {
+        order: 5;
+        width: 50%;
+    }
+    
+    .omlette {
+        order: 4;
+        width: 50%;
+    }
+    
+    
+    .crispy {
+        order: 6;
+        width: 50%;
+    }
+    
+    .kofta {
+        order: 7;
+        width: 50%;
+    }
+    .gallery-photos {
+        height: 2000px;
+    }
+}
+
+/* large*/
+@media screen and (min-width : 1024px) {
+    body {
+        padding-top: 90px;
+    }
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        gap: 80px;
+        padding: 40px 5px;
+        height: 90vh;
+    }
+    body:not(:has(:target)) .home-link,
+    body:has(.header:target) .home-link,
+    body:has(.section-two:target) .chefs-link,
+    body:has(.section-three:target) .gallery-link,
+    body:has(.section-four:target) .contact-link {
+        color: black;
+    }
+    body:not(:has(:target)) .home-link::after,
+    body:has(.header:target) .home-link::after,
+    body:has(.section-two:target) .chefs-link::after,
+    body:has(.section-three:target) .gallery-link::after,
+    body:has(.section-four:target) .contact-link::after {
+        width: calc(100% - 30px);
+    }
+    .grp-btn {
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+    }
+    .nav-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .nav-container ul {
+        opacity: 1;
+        gap: 20px;
+    }
+    .nav-container ul li a{
+        color: #7f7f90;
+        font-size: 17px;
+        font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-weight: 600;
+        padding: 5px 15px;
+        position: relative;
+    }
+    .nav-container ul li a::after {
+        content: "";
+        position: absolute;
+        left: 15px;
+        bottom: 0;
+        width: 0px;
+        height: 1.8px;
+        background-color: #ce1212;
+        transition: all .5s;
+    }
+    .nav-container ul li:hover a::after {
+        width: calc(100% - 30px);
+    }
+
+    .nav-container .icons #unique {
+        display: none;
+    }
+  
+    
+
+    .container3 {
+        width: 100%;
+        text-align: center;
+    }
+    .gallery-photos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: normal;
+        align-content: normal;
+        justify-content: normal;
+        text-align: center;
+        height: 56.8125rem;
+        width: 85%;
+        gap: 1.25rem;
+        --gap: 1.25rem;
+        margin: 0 auto;
+    }
+    .gallery-photos img {
+        width: 100%;
+    }
+    .pizza {
+        order: 1;
+    }
+    .pizza-slices {
+        order: 2;
+    }
+    
+    .steak {
+        order: 3;
+    }
+    
+    .omlette {
+        order: 4;
+    }
+    
+    .burger {
+        order: 5;
+    }
+    
+    .crispy {
+        order: 6;
+    }
+    
+    .kofta {
+        order: 7;
+    }
+    
+    .gallery-photos .gallery {
+        width: calc(calc(100% - var(--gap) * 2) / 3);
+        position: relative;
+        overflow: hidden;
+    }
+   
+    .lg-100{
+        width: 100%;
+    }
+    .lg-50{
+        width: 50%;
+
+    }
+    .chef-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+    .lg-33{
+        width: 33.33333%;
+    }
+    .lg-25{
+        width: 25%;
+
+    }
+    .lg-20{
+        width: 20%;
+
+    }
+    .lg-16{
+        width: 16.66666%;
+
+    }
+    form .inputs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+    .inputs input {
+        width: 50%;
+    }
+}
+
+/* xlarge*/
+@media screen and (min-width : 1280px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 80px;
+        padding: 40px 5px;
+    }
+    .header-photo {
+        width: 80%;
+        padding-left: 50px;
+    }
+    .grp-btn {
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+    }
+   
+    .nav-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .nav-container ul {
+        opacity: 1;
+        gap: 20px;
+    }
+    .nav-container ul li a{
+        color: #7f7f90;
+        font-size: 17px;
+        font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-weight: 600;
+        transition: all .2s;
+    }
+    .nav-container ul li a:hover {
+        color: black;
+    }
+   
+    .container2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container3 {
+        width:100%;
+        text-align: center;
+    }
+    .gallery-photos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: normal;
+        align-content: normal;
+        justify-content: normal;
+        text-align: center;
+        height: 72.8125rem;
+        gap: 1.25rem;
+        --gap: 1.25rem;
+        width: 84%;
+        margin: 0 auto;
+    }
+    .gallery-photos img {
+        width: 100%;
+    }
+    .pizza {
+        order: 1;
+    }
+    .pizza-slices {
+        order: 2;
+    }
+    
+    .steak {
+        order: 3;
+    }
+    
+    .omlette {
+        order: 4;
+    }
+    
+    .burger {
+        order: 5;
+    }
+    
+    .crispy {
+        order: 6;
+    }
+    
+    .kofta {
+        order: 7;
+    }
+    
+    .gallery-photos .gallery {
+        width: calc(calc(100% - var(--gap) * 2) / 3);
+        position: relative;
+        overflow: hidden;
+    }
+    .gallery img {
+        width: 100%;
+    }
+   
+    .xlg-100{
+        width: 100%;
+
+    }
+    .xlg-50{
+        width: 50%;
+
+    }
+    .xlg-33{
+        width: 33.3333%;
+
+    }
+    .xlg-25{
+        width: 25%;
+
+    }
+    .xlg-20{
+        width: 20%;
+
+    }
+    .xlg-16{
+        width: 16.666666%;
+
+    }
+    .container5 {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 90%;
+        margin: 0 auto;
+        gap: 30px;
+    }
+    .subscription-grp {
+        display: flex;
+        flex-direction: row;
+
+    }
+    .subscription-grp button {
+        width: 20%;
+    }
+    .subscription-grp input {
+        width: 80%;
+    }
+
+    .container4 {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
